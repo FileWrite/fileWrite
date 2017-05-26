@@ -40,6 +40,16 @@ public class ContactGrabber {
             Scanner userInput = new Scanner(System.in);
             int input = userInput.nextInt();
 
+            if ( input ==5){
+                Files.write(
+                        Paths.get("data","contactNames.txt"),contacts);
+                System.exit(0);
+            } //end option 5
+
+            if (input == 4) {    //---------------------
+                  System.out.println("Which contact would you like to delete");
+                }
+
             if (input == 1) {    //---------------------
                 for (String line : contacts) {
                     System.out.println(line);
