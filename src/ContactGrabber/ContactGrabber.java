@@ -30,11 +30,12 @@ public class ContactGrabber {
         do {
 
             System.out.println("---------------------");
-            System.out.println("1. View contacts.\n" +
-                    "2. Add a new contact.\n" +
-                    "3. Search a contact by name.\n" +
-                    "4. Delete an existing contact.\n" +
-                    "5. Exit.\n"+
+            System.out.println("MENU:");
+            System.out.println("\t1. View contacts.\n" +
+                    "\t2. Add a new contact.\n" +
+                    "\t3. Search a contact by name.\n" +
+                    "\t4. Delete an existing contact.\n" +
+                    "\t5. Exit.\n"+
                     "Enter an option (1, 2, 3, 4 or 5):\n");
 
             Scanner userInput = new Scanner(System.in);
@@ -71,7 +72,7 @@ public class ContactGrabber {
 
                 for(String contact : contacts) {
                     if (contact.toLowerCase().contains(searchName.toLowerCase())) {
-                        System.out.print(searchName + "  ---> was found in this contact :" + contact);
+                        System.out.print("\nThe search term was found in this contact :" + contact +"\n");
                         found=true;
                     }
                 }
